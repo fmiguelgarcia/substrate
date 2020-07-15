@@ -27,15 +27,14 @@ pallet-session = { version = "2.0.0-rc3", default-features = false, path = "../s
 sp-consensus-babe = { version = "0.8.0-rc3", default-features = false, path = "../../primitives/consensus/babe" }
 sp-consensus-vrf = { version = "0.8.0-rc3", default-features = false, path = "../../primitives/consensus/vrf" }
 sp-io = { version = "2.0.0-rc3", default-features = false, path = "../../primitives/io" }
-
-[dev-dependencies]
-sp-core = { version = "2.0.0-rc3", path = "../../primitives/core" }
+sp-core = { version = "2.0.0-rc3", default-features = false, path = "../../primitives/core" }
 
 [features]
 default = ["std"]
 std = [
 	"codec/std",
 	"serde",
+	"sp-core/std",
 	"sp-std/std",
 	"sp-application-crypto/std",
 	"frame-support/std",
