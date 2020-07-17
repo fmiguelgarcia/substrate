@@ -42,6 +42,7 @@ use serde::{de, Serializer, Serialize, Deserializer, Deserialize};
 use crate::crypto::{Public as TraitPublic, CryptoTypePublicPair, UncheckedFrom, CryptoType, Derive, CryptoTypeId};
 use sp_runtime_interface::pass_by::PassByInner;
 use sp_std::ops::Deref;
+use signature::signer::Signer;
 
 /// An identifier used to match public keys against ed25519 keys
 pub const CRYPTO_ID: CryptoTypeId = CryptoTypeId(*b"ed25");
